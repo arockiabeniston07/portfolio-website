@@ -52,8 +52,8 @@ export default function Resume() {
             <div className="absolute -inset-1 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 opacity-25 blur group-hover:opacity-40 transition duration-300"></div>
             
             <a
-              href="/Arockia_Beniston_V_Resume.pdf"
-              download="Arockia_Beniston_V_Resume.pdf"
+              href="/Arockia_Beniston_V_Resume_Updated.pdf"
+              download="Arockia_Beniston_V_Resume_Updated.pdf"
               className="relative px-8 py-4 bg-zinc-900 border border-white/10 hover:border-indigo-500/40 text-white rounded-lg font-semibold tracking-wider text-xs md:text-sm flex items-center gap-3 select-none transition-all duration-300 cursor-pointer min-w-[240px] justify-center overflow-hidden hover:scale-105 active:scale-98 hover:shadow-[0_0_25px_rgba(99,102,241,0.25)]"
             >
               <Download size={16} />
@@ -62,7 +62,7 @@ export default function Resume() {
           </div>
           
           <span className="text-[10px] font-mono text-zinc-500 mt-4 uppercase tracking-widest">
-            AROCKIA_BENISTON_V_RESUME.PDF // 177 KB
+            AROCKIA_BENISTON_V_RESUME_UPDATED.PDF // 212 KB
           </span>
         </div>
       </div>

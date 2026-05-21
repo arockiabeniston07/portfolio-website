@@ -183,8 +183,8 @@ export default function Hero() {
               View Projects
             </button>
             <a
-              href="/Arockia_Beniston_V_Resume.pdf"
-              download="Arockia_Beniston_V_Resume.pdf"
+              href="/Arockia_Beniston_V_Resume_Updated.pdf"
+              download="Arockia_Beniston_V_Resume_Updated.pdf"
               className="group px-7 py-3.5 rounded-xl font-semibold text-sm tracking-wide text-zinc-300 hover:text-white glass hover:bg-white/5 border border-white/10 hover:border-indigo-500/40 hover:shadow-[0_0_25px_rgba(99,102,241,0.2)] transition-all duration-300 hover:scale-105 active:scale-98 flex items-center gap-2 cursor-pointer"
             >
               <Download size={15} />
