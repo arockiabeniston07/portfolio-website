@@ -81,105 +81,234 @@ export default function Projects() {
           />
         </div>
 
-        {/* Featured Showcase Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        {/* Projects Container */}
+        <div className="flex flex-col gap-32">
           
-          {/* Project Visual Showcase */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-6 order-2 lg:order-1"
-          >
-            <div className="relative group rounded-xl overflow-hidden glass border border-white/10 shadow-2xl">
-              {/* Image with overlay and zoom effect */}
-              <div className="relative overflow-hidden aspect-video">
-                <img 
-                  src={smartCropImg} 
-                  alt="Smart Crop Recommendation System mockup" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-transparent to-transparent opacity-60" />
+          {/* Featured Project 1: Smart Crop */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Project Visual Showcase */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-6 order-2 lg:order-1"
+            >
+              <div className="relative group rounded-xl overflow-hidden glass border border-white/10 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:border-blue-500/40">
+                {/* Image with overlay and zoom effect */}
+                <div className="relative overflow-hidden aspect-video">
+                  <img 
+                    src={smartCropImg} 
+                    alt="Smart Crop Recommendation System mockup" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent opacity-80" />
+                </div>
+
+                {/* Floating Dashboard Indicators */}
+                <div className="absolute top-4 left-4 glass px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-1.5 text-[10px] font-mono text-zinc-300 backdrop-blur-md">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  AI Core Online
+                </div>
               </div>
+            </motion.div>
 
-              {/* Floating Dashboard Indicators */}
-              <div className="absolute top-4 left-4 glass px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-1.5 text-[10px] font-mono text-zinc-300">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                AI Core Online
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Project Details */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: '-50px' }}
-            transition={{ duration: 0.6 }}
-            className="lg:col-span-6 order-1 lg:order-2 text-left space-y-6"
-          >
-            <div className="space-y-2">
-              <span className="text-xs font-mono font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 uppercase">
-                Featured Case Study
-              </span>
-              <h3 className="text-2xl md:text-3xl font-extrabold text-white">
-                Smart Crop Recommendation System
-              </h3>
-            </div>
-
-            <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
-              An intelligent machine-learning framework designed to analyze soil parameters (Nitrogen, Phosphorus, Potassium, pH) along with seasonal weather conditions to recommend the highest yielding crop for farmers.
-            </p>
-
-            {/* Feature checklist */}
-            <ul className="space-y-2.5 font-sans text-xs md:text-sm text-zinc-300">
-              <li className="flex items-center gap-2">
-                <CheckCircle size={14} className="text-blue-500 shrink-0" />
-                <span>Multi-parameter classification (N-P-K, pH, Humidity)</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle size={14} className="text-blue-500 shrink-0" />
-                <span>High accuracy predictive algorithm for regional crops</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle size={14} className="text-blue-500 shrink-0" />
-                <span>Modern interactive dashboard for telemetry metrics</span>
-              </li>
-            </ul>
-
-            {/* Badges */}
-            <div className="flex flex-wrap gap-2 pt-2">
-              {['React.js', 'Python', 'Machine Learning', 'SQL', 'Tailwind CSS'].map((tech) => (
-                <span 
-                  key={tech} 
-                  className="px-2.5 py-1 rounded bg-zinc-900 border border-white/5 text-[10px] font-mono font-medium text-zinc-300"
-                >
-                  {tech}
+            {/* Project Details */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-6 order-1 lg:order-2 text-left space-y-6"
+            >
+              <div className="space-y-2">
+                <span className="text-xs font-mono font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 uppercase">
+                  Featured Case Study
                 </span>
-              ))}
-            </div>
+                <h3 className="text-2xl md:text-3xl font-extrabold text-white">
+                  Smart Crop Recommendation System
+                </h3>
+              </div>
 
-            {/* Action buttons */}
-            <div className="flex items-center gap-4 pt-3">
-              <a
-                href="https://github.com/arockiabeniston07"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-white/10 hover:border-white/20 text-xs font-semibold text-white tracking-wide transition-all"
-              >
-                <GithubIcon size={16} />
-                GitHub Project
-              </a>
-              <button
-                onClick={() => setShowDemo(true)}
-                className="flex items-center gap-2 px-5 py-2.5 rounded bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-xs font-semibold text-white tracking-wide shadow-lg shadow-blue-500/10 hover:shadow-blue-500/20 hover:scale-102 transition-all cursor-pointer"
-              >
-                <ExternalLink size={14} />
-                Live Demo Simulator
-              </button>
-            </div>
-          </motion.div>
+              <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
+                An intelligent machine-learning framework designed to analyze soil parameters (Nitrogen, Phosphorus, Potassium, pH) along with seasonal weather conditions to recommend the highest yielding crop for farmers.
+              </p>
+
+              {/* Feature checklist */}
+              <ul className="space-y-2.5 font-sans text-xs md:text-sm text-zinc-300">
+                <li className="flex items-center gap-2">
+                  <CheckCircle size={14} className="text-blue-500 shrink-0" />
+                  <span>Multi-parameter classification (N-P-K, pH, Humidity)</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle size={14} className="text-blue-500 shrink-0" />
+                  <span>High accuracy predictive algorithm for regional crops</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle size={14} className="text-blue-500 shrink-0" />
+                  <span>Modern interactive dashboard for telemetry metrics</span>
+                </li>
+              </ul>
+
+              {/* Badges */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                {['React.js', 'Python', 'Machine Learning', 'SQL', 'Tailwind CSS'].map((tech, i) => (
+                  <motion.span 
+                    key={tech}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 * i }}
+                    viewport={{ once: true }}
+                    className="px-2.5 py-1 rounded bg-zinc-900 border border-white/5 text-[10px] font-mono font-medium text-zinc-300 shadow-sm"
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
+              </div>
+
+              {/* Action buttons */}
+              <div className="flex flex-wrap items-center gap-4 pt-3">
+                <a
+                  href="https://github.com/arockiabeniston07"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-white/10 hover:border-white/20 text-xs font-semibold text-white tracking-wide transition-all"
+                >
+                  <GithubIcon size={16} />
+                  GitHub Project
+                </a>
+                <button
+                  onClick={() => setShowDemo(true)}
+                  className="relative group flex items-center gap-2 px-5 py-2.5 rounded bg-gradient-to-r from-blue-600 to-indigo-600 text-xs font-semibold text-white tracking-wide shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all cursor-pointer overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                  <ExternalLink size={14} className="relative z-10" />
+                  <span className="relative z-10">Live Demo Simulator</span>
+                </button>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Featured Project 2: Leo Cafe */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            {/* Project Details */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-6 order-1 lg:order-1 text-left space-y-6"
+            >
+              <div className="space-y-2">
+                <span className="text-xs font-mono font-bold tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 uppercase">
+                  Full Stack / Responsive Web Application
+                </span>
+                <h3 className="text-2xl md:text-3xl font-extrabold text-white">
+                  Leo Cafe – Online Cafe Website
+                </h3>
+              </div>
+
+              <p className="text-zinc-400 text-sm md:text-base leading-relaxed">
+                Developed a modern and fully responsive online cafe website called Leo Cafe with an attractive UI, smooth animations, and an interactive user experience. The website includes beautifully designed menu sections, featured products, responsive layouts, and modern frontend effects to create a premium cafe browsing experience.
+              </p>
+
+              {/* Feature checklist */}
+              <ul className="space-y-2.5 font-sans text-xs md:text-sm text-zinc-300">
+                <li className="flex items-center gap-2">
+                  <CheckCircle size={14} className="text-blue-500 shrink-0" />
+                  <span>Beautifully designed menu sections and featured products</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle size={14} className="text-blue-500 shrink-0" />
+                  <span>Smooth animations and interactive user experience</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle size={14} className="text-blue-500 shrink-0" />
+                  <span>Fully responsive modern frontend layouts</span>
+                </li>
+              </ul>
+
+              {/* Badges */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                {['HTML', 'CSS', 'JavaScript', 'React', 'Bootstrap'].map((tech, i) => (
+                  <motion.span 
+                    key={tech}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 * i }}
+                    viewport={{ once: true }}
+                    className="px-2.5 py-1 rounded bg-zinc-900 border border-white/5 text-[10px] font-mono font-medium text-zinc-300 shadow-sm"
+                  >
+                    {tech}
+                  </motion.span>
+                ))}
+              </div>
+
+              {/* Action buttons */}
+              <div className="flex flex-wrap items-center gap-4 pt-3">
+                <button
+                  disabled
+                  className="flex items-center gap-2 px-5 py-2.5 rounded bg-zinc-900/50 border border-white/5 text-xs font-semibold text-zinc-500 tracking-wide cursor-not-allowed opacity-80"
+                >
+                  <GithubIcon size={16} />
+                  GitHub Repository Coming Soon
+                </button>
+                <a
+                  href="https://leocafeonline.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="relative group flex items-center gap-2 px-5 py-2.5 rounded bg-gradient-to-r from-blue-600 to-indigo-600 text-xs font-semibold text-white tracking-wide shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all cursor-pointer overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+                  <ExternalLink size={14} className="relative z-10" />
+                  <span className="relative z-10">Live Demo</span>
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Project Visual Showcase */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-50px' }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-6 order-2 lg:order-2"
+            >
+              <div className="relative group rounded-xl overflow-hidden glass border border-white/10 shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_rgba(59,130,246,0.3)] hover:border-blue-500/40">
+                {/* Simulated Browser Frame */}
+                <div className="w-full h-7 bg-zinc-900/90 border-b border-white/10 flex items-center px-3 gap-1.5 z-10 relative">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80"></div>
+                  <div className="ml-4 h-4 w-1/2 bg-white/5 rounded flex items-center px-2">
+                    <span className="text-[8px] font-mono text-zinc-500">leocafeonline.netlify.app</span>
+                  </div>
+                </div>
+                {/* Image with overlay and zoom effect */}
+                <div className="relative overflow-hidden aspect-video bg-zinc-900">
+                  <img 
+                    src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1000&auto=format&fit=crop" 
+                    alt="Leo Cafe Online Cafe Website mockup" 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 ease-out opacity-80 group-hover:opacity-100"
+                  />
+                  <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                     <span className="text-3xl md:text-4xl font-serif font-bold text-white drop-shadow-2xl tracking-widest uppercase">LEO CAFE</span>
+                     <span className="text-xs text-white/90 tracking-widest uppercase mt-2 font-mono">Premium Coffee Experience</span>
+                     <div className="mt-4 px-4 py-1.5 border border-white/30 text-white text-[10px] tracking-widest uppercase backdrop-blur-sm bg-black/20">Explore Menu</div>
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent opacity-80" />
+                </div>
+
+                {/* Floating Dashboard Indicators */}
+                <div className="absolute top-11 left-4 glass px-3 py-1.5 rounded-lg border border-white/10 flex items-center gap-1.5 text-[10px] font-mono text-zinc-300 backdrop-blur-md">
+                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
+                  Live Server Online
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
 
