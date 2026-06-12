@@ -252,7 +252,7 @@ export default function Projects() {
                   href="https://github.com/arockiabeniston07/LEO_CAFE"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-5 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-white/10 hover:border-white/20 text-xs font-semibold text-white tracking-wide transition-all hover:scale-105 hover:shadow-[0_0_15px_rgba(255,255,255,0.1)] cursor-pointer glass"
+                  className="flex items-center gap-2 px-5 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-white/10 hover:border-white/20 text-xs font-semibold text-white tracking-wide transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.4),_0_0_20px_rgba(168,85,247,0.4)] cursor-pointer glass"
                 >
                   <GithubIcon size={16} />
                   GitHub Repository
